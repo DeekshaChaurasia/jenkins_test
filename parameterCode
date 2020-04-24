@@ -15,6 +15,7 @@ pipeline{
       echo "Your Choice is: ${params.CHOICE}"
       echo "Your boolean Choice is: ${params.BOOLEAN}"
       echo "Your password is: ${params.PASSWORD}"
+      echo "This is it"
       }
      }
     }
