@@ -10,6 +10,7 @@ pipeline {
         post {
                 success{
                         echo 'this post build is success'
+                        echo 'this post build is success2'
                 }
                 failure {
                         echo 'This post build is failure'
