@@ -3,17 +3,16 @@ pipeline {
         stages {
                 stage('stage1') {
                         steps {
-                                echo 'This is normal stage'
+                               sh 'ls'
                         }
                 }
         }
         post {
                 success{
-                        echo 'this post build is success'
-                        echo 'this post build is success2'
+                        echo 'The command executed sucessfully'
                 }
                 failure {
-                        echo 'This post build is failure'
+                        echo 'This command was not executed sucessfully'
                 }
         }
 }
