@@ -17,7 +17,6 @@ pipeline{
                 stage("step2"){
                          options{
                                 timeout(time:2,unit:"MINUTES")
-                                 
                         }
                         steps{
                                 sh 'printf "executing step2"'
