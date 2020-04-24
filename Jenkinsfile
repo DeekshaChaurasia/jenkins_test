@@ -7,6 +7,6 @@ node('master'){
 }
 def echo_all(list){
         for (int i=0;i<list.size();i++){
-                sh "This is ${item}"
+                sh "This is ${list[i]}"
         }
 }
