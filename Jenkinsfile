@@ -1,18 +1,26 @@
 pipeline {
         agent any
         stages {
-                stage('stage1') {
+                stage('Devmaster') {
+                        when{
+                                anyOf{
+                                        branch 'master';branch'development'
+                                }
+                        }
                         steps {
-                               sh 'ls'
+                               echo 'I am either Master or Development branch'
+                        }
+                }
+                stage('master'){
+                        when{
+                                branch 'master'
+                        }
+                        steps{
+                                echo 'I am master'
                         }
                 }
         }
-        post {
-                success{
-                        echo 'The command executed sucessfully'
-                }
-                failure {
-                        echo 'This command was not executed sucessfully'
-                }
-        }
 }
+                        
+                        
+        
